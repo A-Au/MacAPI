@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "start": "npm-run-all --parallel dev serveo",
+    "dev": "nodemon server.js",
+    "serveo": "while true; do ssh -R 80:localhost:8000 multo @serveo.net; done"
   },
   "repository": {
     "type": "git",
@@ -20,7 +22,8 @@
   "dependencies": {
     "express": "^4.16.3",
     "node-cmd": "^3.0.0",
-    "npm": "^6.0.0"
+    "npm": "^6.0.0",
+    "npm-run-all": "^4.1.2"
   },
   "devDependencies": {
     "nodemon": "^1.17.4"

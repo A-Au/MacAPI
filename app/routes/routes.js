@@ -1,6 +1,6 @@
 const cmd = require('node-cmd');
 
-module.exports = function(app, db) {
+module.exports = function(app) {
   app.get('/setVolume/:vol', (req, res) => {
     const vol = Math.round(req.params.vol);
     cmd.get('osascript -e \'set volume output volume ' + vol + '\'', (err, data, stderr) =>{
