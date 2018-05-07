@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm-run-all --parallel dev serveo",
     "dev": "nodemon server.js",
-    "serveo": "while true; do ssh -R 80:localhost:8000 multo @serveo.net; done"
+    "serveo": "while true; do ssh -R 80:localhost:8000 multo@serveo.net; done"
   },
   "repository": {
     "type": "git",
